@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.mycom.account</groupId>
         <artifactId>account-parent</artifactId>
-        <version>1.1-release</version>
+        <version>1.0-SNAPSHOT</version>
         <relativePath>../account-parent/pom.xml</relativePath>
     </parent>
 
@@ -44,9 +44,23 @@
             <groupId>com.google.code.kaptcha</groupId>
             <artifactId>kaptcha</artifactId>
             <version>${kaptcha.version}</version>
+            <classifier>jdk15</classifier>
         </dependency>
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>sonatype-forge</id>
+            <name>Sonatype Forge</name>
+            <url>http://repository.sonatype.org/content/groups/forge/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
